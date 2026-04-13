@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from 'lucide-react';
+import {  ArrowUpRight } from 'lucide-react';
 
 interface Project {
   name: string;
@@ -11,54 +11,24 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: 'Blockbase',
-    description: 'Minecraft meets Git. CodeJam15 Hackathon Winner!',
-    tech: ['Java'],
-    github: 'https://github.com/rayyankhan47/Blockbase',
-    stars: 53,
+    name: 'Folio',
+    description: 'This is my first creative portfolio website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel.',
+    tech: ['TypeScript', 'GSAP', 'React'],
+    github: 'https://github.com/Adlkhy/folio',
   },
   {
-    name: 'Tesseract',
-    description: 'Cursor meets Minecraft. Hackathon submission for McHacks 13.',
-    tech: ['Java'],
-    github: 'https://github.com/rayyankhan47/Tesseract',
-    stars: 3,
-  },
-  {
-    name: 'grid-heist',
-    description:
-      'Orchestrating multiple LLMs to compete against each other. Complex multi-agent reasoning in real-time using Backboard.io.',
-    tech: ['Python'],
-    github: 'https://github.com/rayyankhan47/grid-heist',
-  },
-  {
-    name: 'makemore',
-    description:
-      'A character-level language model that trains on a dataset of words of a given category, and produces more like them.',
-    tech: ['Jupyter Notebook'],
-    github: 'https://github.com/rayyankhan47/makemore',
-  },
-  {
-    name: 'Navvi',
-    description:
-      'An AI onboarding tool for new developers and interns. Submission for SpurHacks 2025.',
-    tech: ['TypeScript'],
-    github: 'https://github.com/rayyankhan47/Navvi',
-  },
-  {
-    name: 'micrograd',
-    description:
-      'Building micrograd from scratch. Micrograd is an autograd engine that implements backpropagation and has a small neural net library built on top of it.',
-    tech: ['Python'],
-    github: 'https://github.com/rayyankhan47/micrograd',
-  },
+    name: 'CS50P & CS50W Projects',
+    description: 'A collection of projects from the CS50P (Python) and CS50W (Web Programming) courses.',
+    tech: ['Python', 'JavaScript', 'Django'],
+    github: 'https://github.com/Adlkhy/python-projects',
+  }
 ];
 
 const SelectedProjects = () => {
   return (
-    <section id="projects" className="py-12 px-4 sm:px-6">
+    <section id="projects" className="py-8 px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold text-foreground mb-8 animate-fade-in-up">
+        <h2 className="text-sm font-mono font-medium text-muted-foreground uppercase mb-6 animate-fade-in-up">
           Selected Projects
         </h2>
 
@@ -69,20 +39,19 @@ const SelectedProjects = () => {
               href={project.github || project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-primary transition-all duration-300 animate-fade-in-up"
+              className="group block bg-card border border-border rounded-md p-4 hover:shadow-md hover:border-primary transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="flex items-start justify-between mb-3">
+              <div className="flex items-start justify-between mb-1">
                 <div className="flex items-center gap-2">
-                  <Github className="w-5 h-5 text-foreground" />
-                  <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="font-mono font-medium text-foreground group-hover:text-primary transition-colors">
                     {project.name}
                   </h3>
                 </div>
-                <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm font-mono text-muted-foreground leading-relaxed mb-2">
                 {project.description}
               </p>
 
@@ -91,7 +60,7 @@ const SelectedProjects = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs px-2 py-1 bg-foreground/10 text-foreground rounded-md"
+                      className="text-xs font-mono px-2 py-1 bg-foreground/10 text-foreground rounded-md"
                     >
                       {tech}
                     </span>

@@ -27,33 +27,33 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-3xl mx-auto p-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-foreground">Rayyan Khan</span>
-            <span className="text-xs text-muted-foreground">Math & ML</span>
+            <h1 className="text-xl text-foreground">Adilkhan Ersin</h1>
+            <span className="text-xs font-mono text-muted-foreground">Cybersecurity & SE</span>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 ">
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
             </button>
             <button
-              onClick={() => scrollToSection('work')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => scrollToSection('certifications')}
+              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Work
+              Certifications
             </button>
             <button
-              onClick={() => scrollToSection('activities')}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => scrollToSection('work')}
+              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Activities
+              Work
             </button>
           </div>
         </div>

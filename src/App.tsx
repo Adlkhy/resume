@@ -5,7 +5,7 @@ import FeaturedProjects from './sections/FeaturedProjects';
 import SelectedProjects from './sections/SelectedProjects';
 import Certifications from './sections/Certifications';
 import WorkExperience from './sections/WorkExperience';
-import Activities from './sections/Activities';
+// import Activities from './sections/Activities';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <SelectedProjects />
         <Certifications />
         <WorkExperience />
-        <Activities />
+        {/* <Activities /> */}
       </main>
       <Footer />
     </div>
