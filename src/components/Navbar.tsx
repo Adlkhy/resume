@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react';
+import { Button } from './ui/button';
+import { Menu, X } from 'lucide-react';
+
+const navLinks = [
+  { label: 'Projects', href: '#projects' },
+  { label: 'Certifications', href: '#certifications' },
+  { label: 'Work', href: '#work' },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +36,7 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-3xl mx-auto p-4">
+      <div className=" max-w-3xl mx-auto p-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex flex-col">
@@ -36,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex items-center gap-4 ">
+          <div className="hidden md:flex items-center gap-4 ">
             <button
               onClick={() => scrollToSection('projects')}
               className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -56,8 +65,33 @@ const Navbar = () => {
               Work
             </button>
           </div>
+          {/* Mobile Menu Button */}
+          <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} variant="ghost" size="icon" 
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent">
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
         </div>
       </div>
+      {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div
+            className="fixed inset-x-0 top-16 z-40 md:hidden"
+          >
+            <div className="bg-background/95 backdrop-blur-xl border-b border-border p-4">
+              <div className="flex flex-col gap-2">
+                {navLinks.map((link) => (
+                  <a
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    key={link.label}
+                    href={link.href} className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
     </nav>
   );
 };
