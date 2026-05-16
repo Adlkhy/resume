@@ -37,7 +37,7 @@ const Hero = () => {
             I'm currently pursuing my B.Sc. at{' '}
             <span className=" text-foreground">Astana IT University</span>, studying
             Cybersecurity, and I'm working on my own startup
-            ventures. I'm also interested in Software Engineering.
+            ventures. I'm also interested in Web Development.
           </p>
         </div>
 

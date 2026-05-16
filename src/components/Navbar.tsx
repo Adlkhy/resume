@@ -41,7 +41,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex flex-col">
             <h1 className="text-xl text-foreground">Adilkhan Ersin</h1>
-            <span className="text-xs font-mono text-muted-foreground">Cybersecurity & SE</span>
+            <span className="text-xs font-mono text-muted-foreground">Cybersecurity & WEB</span>
           </div>
 
           {/* Navigation Links */}
