@@ -68,7 +68,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} variant="ghost" size="icon" 
             className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent">
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
         </div>
       </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
           <div
             className="fixed inset-x-0 top-16 z-40 md:hidden"
           >
-            <div className="bg-background/95 backdrop-blur-xl border-b border-border p-4">
+            <div className="bg-background/95 backdrop-blur-xl border-b border-border py-2">
               <div className="flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <a

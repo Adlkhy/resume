@@ -26,7 +26,7 @@ const projects: Project[] = [
 
 const SelectedProjects = () => {
   return (
-    <section id="projects" className="py-8 px-6">
+    <section id="projects" className="py-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-mono font-medium text-muted-foreground uppercase mb-6 animate-fade-in-up">
           Selected Projects

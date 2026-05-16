@@ -4,7 +4,7 @@ import { LuMail } from "react-icons/lu";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-8 px-6">
+    <section className="pt-32 pb-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         {/* Introduction */}
         <div className="animate-fade-in-up">

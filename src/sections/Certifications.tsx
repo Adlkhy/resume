@@ -59,7 +59,7 @@ const certifications: Certification[] = [
 
 const Certifications = () => {
   return (
-    <section id='certifications' className="py-8 px-6">
+    <section id='certifications' className="py-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-sm font-mono font-medium text-muted-foreground uppercase mb-4 animate-fade-in-up">
           Certifications

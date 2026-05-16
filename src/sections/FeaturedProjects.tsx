@@ -2,7 +2,7 @@ import { ExternalLink } from 'lucide-react';
 
 const FeaturedProjects = () => {
   return (
-    <section className="py-8 px-6">
+    <section className="py-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-card border border-border rounded-md p-4 hover:shadow-lg transition-shadow duration-300 animate-fade-in-up">
