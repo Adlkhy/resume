@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react';
 
 const FeaturedProjects = () => {
   return (
@@ -11,25 +10,21 @@ const FeaturedProjects = () => {
                 Currently Building
               </span>
             </div>
-
-            <h3 className="text-lg font-mono font-medium text-foreground mb-2">
-              Evalis
-            </h3>
-
-            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-              Building a grade calculator for students at my university. 
-              It will allow students to easily calculate their GPA and track their academic progress. The project is changing rapidly, so stay tuned for updates.
-            </p>
-
             <a
               href="https://evaiis.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-foreground hover:text-accent transition-colors"
+              className="hover:underline"
             >
-              <ExternalLink className="w-3.5 h-3.5" />
-              <span>See here</span>
+            <h3 className="text-lg font-mono font-medium text-foreground mb-2">
+              Evalis
+            </h3>
             </a>
+
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Building a grade calculator for students at my university. 
+              It will allow students to easily calculate their GPA and track their academic progress. The project is changing rapidly, so stay tuned for updates.
+            </p>
           </div>
 
           {/* Second Card */}

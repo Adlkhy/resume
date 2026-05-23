@@ -67,7 +67,7 @@ const WorkExperience = () => {
                   <h3 className="font-semibold font-mono text-foreground text-sm">
                     {exp.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs font-mono">{exp.period}</p>
+                  <p className="text-muted-foreground text-xs md:text-sm font-mono">{exp.period}</p>
                 </div>
                 <div className="mt-1 sm:mt-0">
                   <p className="font-medium text-sm font-mono text-foreground">{exp.company}</p>
@@ -81,7 +81,7 @@ const WorkExperience = () => {
                     href={exp.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-foreground hover:text-accent transition-colors"
+                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <span>(view project)</span>
                     <ExternalLink className="w-3 h-3" />
@@ -93,7 +93,7 @@ const WorkExperience = () => {
                 {exp.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-2.5 py-1 font-mono bg-foreground/10 text-foreground rounded-md"
+                    className="text-xs md:text-sm px-2.5 py-1 font-mono bg-foreground/10 text-foreground rounded-md"
                   >
                     {tech}
                   </span>

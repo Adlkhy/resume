@@ -11,31 +11,13 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    name: 'Introduction to Programming with Python',
-    issuer: 'Harvard University (edX)',
-    date: 'Jul 2024',
+    name: 'Cisco Cybersecurity Specialist',
+    issuer: 'Cisco',
+    date: 'Feb 2026',
     description:
-      'Fundamental programming concepts using Python, including data structures, algorithms, and software engineering principles.',
-    link: 'https://cs50.harvard.edu/certificates/4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
-    credentialId: '4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
-  },
-  {
-    name: 'Introduction to Social Media Marketing by Meta',
-    issuer: 'Meta (Coursera)',
-    date: 'Sep 2024',
-    description:
-      'Comprehensive introduction to social media marketing strategies, tools, and best practices for businesses and individuals.',
-    link: 'https://coursera.org/verify/M093TQGK0G3X',
-    credentialId: 'M093TQGK0G3X',
-  },
-  {
-    name: 'Web Programming with Python and JavaScript',
-    issuer: 'Harvard University (edX)',
-    date: 'Oct 2024',
-    description:
-      'Full-stack web development using Python, JavaScript, and frameworks like Flask and React.',
-    link: 'https://cs50.harvard.edu/certificates/e180c108-c5a8-4f5e-b536-dfdd234d917b',
-    credentialId: 'e180c108-c5a8-4f5e-b536-dfdd234d917b',
+      'Comprehensive training in cybersecurity fundamentals, including network security, threat analysis, and incident response.',
+    link: 'https://www.credly.com/earner/earned/badge/01d951d1-654b-4071-ace8-34201b7a0a5d',
+    credentialId: '01d951d1-654b-4071-ace8-34201b7a0a5d',
   },
   {
     name: 'Google Data Analytics Professional Certificate',
@@ -47,13 +29,31 @@ const certifications: Certification[] = [
     credentialId: '2f9f2b2f-9f8b-4a8e-a135-f0bc7fec7729',
   },
   {
-    name: 'Cisco Cybersecurity Specialist',
-    issuer: 'Cisco',
-    date: 'Feb 2026',
+    name: 'Web Programming with Python and JavaScript',
+    issuer: 'Harvard University (edX)',
+    date: 'Oct 2024',
     description:
-      'Comprehensive training in cybersecurity fundamentals, including network security, threat analysis, and incident response.',
-    link: 'https://www.credly.com/earner/earned/badge/01d951d1-654b-4071-ace8-34201b7a0a5d',
-    credentialId: '01d951d1-654b-4071-ace8-34201b7a0a5d',
+      'Full-stack web development using Python, JavaScript, and frameworks like Flask and React.',
+    link: 'https://cs50.harvard.edu/certificates/e180c108-c5a8-4f5e-b536-dfdd234d917b',
+    credentialId: 'e180c108-c5a8-4f5e-b536-dfdd234d917b',
+  },
+  {
+    name: 'Introduction to Social Media Marketing by Meta',
+    issuer: 'Meta (Coursera)',
+    date: 'Sep 2024',
+    description:
+      'Comprehensive introduction to social media marketing strategies, tools, and best practices for businesses and individuals.',
+    link: 'https://coursera.org/verify/M093TQGK0G3X',
+    credentialId: 'M093TQGK0G3X',
+  },
+  {
+    name: 'Introduction to Programming with Python',
+    issuer: 'Harvard University (edX)',
+    date: 'Jul 2024',
+    description:
+      'Fundamental programming concepts using Python, including data structures, algorithms, and software engineering principles.',
+    link: 'https://cs50.harvard.edu/certificates/4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
+    credentialId: '4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
   },
 ];
 
@@ -85,11 +85,11 @@ const Certifications = () => {
                   <div className="flex flex-wrap justify-between items-center gap-4 mb-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1.5">
                       <Building2 className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono text-xs">{cert.issuer}</span>
+                      <span className="font-mono text-xs md:text-sm">{cert.issuer}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Calendar className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono text-xs">{cert.date}</span>
+                      <span className="font-mono text-xs md:text-sm">{cert.date}</span>
                     </div>
                   </div>
 
