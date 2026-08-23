@@ -1,4 +1,7 @@
-import { Award, ExternalLink, Calendar, Building2 } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { BiLinkExternal } from "react-icons/bi";
+import { IoCalendarSharp } from "react-icons/io5";
+import { FaRegBuilding } from "react-icons/fa";
 
 interface Certification {
   name: string;
@@ -84,11 +87,11 @@ const Certifications = () => {
 
                   <div className="flex flex-wrap justify-between items-center gap-4 mb-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-1.5">
-                      <Building2 className="w-4 h-4 text-muted-foreground" />
+                      <FaRegBuilding className="w-4 h-4 text-muted-foreground" />
                       <span className="font-mono text-xs md:text-sm">{cert.issuer}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <Calendar className="w-4 h-4 text-muted-foreground" />
+                      <IoCalendarSharp className="w-4 h-4 text-muted-foreground" />
                       <span className="font-mono text-xs md:text-sm">{cert.date}</span>
                     </div>
                   </div>
@@ -110,10 +113,10 @@ const Certifications = () => {
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-mono text-foreground hover:text-accent transition-colors"
+                      className="inline-flex items-center justify-end w-full gap-1.5 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
                     >
-                      <ExternalLink className="w-3.5 h-3.5" />
                       <span>View Credential</span>
+                      <BiLinkExternal className="w-3.5 h-3.5" />
                     </a>
                   )}
                 </div>

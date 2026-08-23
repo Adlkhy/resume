@@ -1,4 +1,4 @@
-import {  ArrowUpRight } from 'lucide-react';
+import { TbArrowUpRight } from "react-icons/tb";
 
 interface Project {
   name: string;
@@ -11,9 +11,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'AuditBase',
+    description: 'Supabase Auditor — a browser tool that checks your Supabase project for exposed tables and bad RLS configs.',
+    tech: ['TypeScript', 'React', 'Vite', 'jsPDF'],
+    github: 'https://github.com/Adlkhy/AuditBase',
+  },
+  {
     name: 'Folio',
     description: 'This is my first creative portfolio website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel.',
-    tech: ['TypeScript', 'GSAP', 'React'],
+    tech: ['TypeScript', 'GSAP', 'Next.js', 'React'],
     github: 'https://github.com/Adlkhy/folio',
   },
   {
@@ -48,7 +54,7 @@ const SelectedProjects = () => {
                     {project.name}
                   </h3>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                <TbArrowUpRight className="w-5 h-5 text-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               <p className="text-sm font-mono text-muted-foreground leading-relaxed mb-2">

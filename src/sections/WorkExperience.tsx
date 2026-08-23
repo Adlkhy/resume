@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+// import { BiLinkExternal } from "react-icons/bi";
 
 interface Experience {
   title: string;
@@ -26,22 +26,23 @@ const experiences: Experience[] = [
   //   ],
   // },
   {
-    title: 'Freelance Web Developer',
+    title: 'Evalis - Grade Calculator & Leaderboard',
     company: 'Independent',
-    period: 'March 2024 – Present',
+    period: 'October 2025 – Present',
     description:
       'Designed and developed a full-stack web application for university students to calculate their GPA and visualize their academic progress with leaderboards. The app features a user-friendly interface, secure authentication, and real-time data visualization.',
     tech: ['React.js', 'Tailwind CSS', 'Supabase', 'TypeScript', 'Vercel'],
     link: 'https://evaiis.vercel.app/',
   },
-  // {
-  //   title: 'MAIS 202 - Machine Learning Workshop',
-  //   company: 'McGill University',
-  //   period: 'February 2025 – April 2025',
-  //   description:
-  //     'Participated in an 8-week intensive ML/AI workshop, learning about core Machine Learning principles, Neural Networks, and Convolutional Neural Networks.',
-  //   tech: ['Python', 'scikit-learn', 'TensorFlow'],
-  // },
+  {
+    title: 'AuditBase - Supabase Auditor',
+    company: 'Independent',
+    period: 'July 2026',
+    description:
+      'Developed a browser tool that checks Supabase projects for exposed tables and misconfigured Row Level Security (RLS) settings. The tool scans the database schema and provides a detailed report of potential security vulnerabilities, helping developers secure their applications.',
+    tech: ['TypeScript', 'Vite', 'jsPDF', 'Security Auditing'],
+    link: 'https://audit-base.vercel.app/',
+  },
 ];
 
 const WorkExperience = () => {
@@ -76,18 +77,18 @@ const WorkExperience = () => {
 
               <p className="text-muted-foreground font-mono text-sm leading-relaxed mb-4">
                 {exp.description}
-                {exp.link && (
+              </p>
+                {/* {exp.link && (
                   <a
                     href={exp.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                    className="inline-flex items-center w-full justify-end gap-1 text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <span>(view project)</span>
-                    <ExternalLink className="w-3 h-3" />
+                    <span>view project</span>
+                    <BiLinkExternal className="w-3 h-3" />
                   </a>
-                )}
-              </p>
+                )} */}
 
               <div className="flex flex-wrap gap-2">
                 {exp.tech.map((tech) => (
