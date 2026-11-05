@@ -20,7 +20,6 @@ const certifications: Certification[] = [
     description:
       'Comprehensive training in cybersecurity fundamentals, including network security, threat analysis, and incident response.',
     link: 'https://www.credly.com/earner/earned/badge/01d951d1-654b-4071-ace8-34201b7a0a5d',
-    credentialId: '01d951d1-654b-4071-ace8-34201b7a0a5d',
   },
   {
     name: 'Google Data Analytics Professional Certificate',
@@ -29,7 +28,6 @@ const certifications: Certification[] = [
     description:
       'Comprehensive training in data analytics, including data cleaning, visualization, and analysis using tools like SQL and R.',
     link: 'https://www.credly.com/earner/earned/badge/2f9f2b2f-9f8b-4a8e-a135-f0bc7fec7729',
-    credentialId: '2f9f2b2f-9f8b-4a8e-a135-f0bc7fec7729',
   },
   {
     name: 'Web Programming with Python and JavaScript',
@@ -38,16 +36,6 @@ const certifications: Certification[] = [
     description:
       'Full-stack web development using Python, JavaScript, and frameworks like Flask and React.',
     link: 'https://cs50.harvard.edu/certificates/e180c108-c5a8-4f5e-b536-dfdd234d917b',
-    credentialId: 'e180c108-c5a8-4f5e-b536-dfdd234d917b',
-  },
-  {
-    name: 'Introduction to Social Media Marketing by Meta',
-    issuer: 'Meta (Coursera)',
-    date: 'Sep 2024',
-    description:
-      'Comprehensive introduction to social media marketing strategies, tools, and best practices for businesses and individuals.',
-    link: 'https://coursera.org/verify/M093TQGK0G3X',
-    credentialId: 'M093TQGK0G3X',
   },
   {
     name: 'Introduction to Programming with Python',
@@ -56,7 +44,6 @@ const certifications: Certification[] = [
     description:
       'Fundamental programming concepts using Python, including data structures, algorithms, and software engineering principles.',
     link: 'https://cs50.harvard.edu/certificates/4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
-    credentialId: '4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
   },
 ];
 
@@ -102,18 +89,12 @@ const Certifications = () => {
                     </p>
                   )}
 
-                  {cert.credentialId && (
-                    <p className="text-xs font-mono text-muted-foreground mb-2">
-                      Credential ID: {cert.credentialId}
-                    </p>
-                  )}
-
                   {cert.link && (
                     <a
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-end w-full gap-1.5 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
+                      className="inline-flex items-center justify-start w-full gap-1.5 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
                     >
                       <span>View Credential</span>
                       <BiLinkExternal className="w-3.5 h-3.5" />

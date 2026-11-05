@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Work', href: '#work' },
+  { label: 'CV', href: '/cv' },
 ];
 
 const Navbar = () => {
@@ -64,9 +65,18 @@ const Navbar = () => {
             >
               Work
             </button>
+            <a
+              href="/cv"
+              className="font-mono ml-2 border px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors"
+            >
+              CV
+            </a>
           </div>
           {/* Mobile Menu Button */}
-          <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} variant="ghost" size="icon" 
+          <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} variant="ghost" size="icon"
+            aria-label={isMobileMenuOpen ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
             className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent">
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
@@ -75,6 +85,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div
+            id="mobile-navigation"
             className="fixed inset-x-0 top-16 z-40 md:hidden"
           >
             <div className="bg-background/95 backdrop-blur-xl border-b border-border py-2">

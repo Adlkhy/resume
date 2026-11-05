@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adilkhan Ersin's curriculum vitae. Read online or download a PDF copy." />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>CV | Adilkhan Ersin</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+      :root {
+        color-scheme: light;
+        --background: #fcfcfc;
+        --foreground: #000000;
+        --muted-foreground: #525252;
+        --accent: #ebebeb;
+        --border: #e4e4e4;
+        --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
+        --font-mono: IBM Plex Mono, ui-monospace, monospace;
+        font-family: var(--font-sans);
+        color: var(--foreground);
+        background: var(--background);
+        -webkit-font-smoothing: antialiased;
+      }
+      /* @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --background: #000000;
+          --foreground: #ffffff;
+          --muted-foreground: #a4a4a4;
+          --accent: #333333;
+          --border: #242424;
+        }
+      } */
+      * { box-sizing: border-box; border-color: var(--border); }
+      body { margin: 0; }
+      a { color: inherit; text-underline-offset: 4px; }
+      a:hover { color: var(--foreground); }
+      a:focus-visible { outline: 2px solid var(--foreground); outline-offset: 4px; }
+      .page { max-width: 816px; margin: 0 auto; padding: 32px 24px 48px; }
+      .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 48px; font-family: var(--font-mono); font-size: 14px; }
+      .back { color: var(--muted-foreground); text-decoration: none; }
+      .back:hover { text-decoration: underline; }
+      .download { padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; text-decoration: none; transition: background-color 150ms; }
+      .download:hover { background: var(--accent); }
+      h1 { margin: 0 0 8px; font-size: 24px; font-weight: 600; line-height: 1.4; }
+      .role { margin: 0 0 16px; font-size: 16px; }
+      .contact { margin: 4px 0; color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
+      .separator { margin: 0 8px; }
+      header { padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+      section { padding-top: 32px; }
+      h2 { margin: 0 0 24px; color: var(--muted-foreground); font-family: var(--font-mono); font-size: 14px; font-weight: 500; text-transform: uppercase; }
+      h3 { margin: 0 0 8px; font-family: var(--font-mono); font-size: 14px; font-weight: 600; line-height: 1.6; }
+      .entry + .entry { margin-top: 24px; }
+      section p, section li { color: var(--muted-foreground); font-family: var(--font-mono); font-size: 14px; line-height: 1.75; }
+      section p { margin: 0 0 8px; }
+      .meta { font-size: 12px; }
+      strong { color: var(--foreground); font-weight: 500; }
+      ul { padding-left: 20px; margin: 8px 0 0; }
+      li + li { margin-top: 4px; }
+      main { overflow-wrap: anywhere; }
+      @media (max-width: 640px) {
+        .page { padding: 24px 16px 48px; }
+        .toolbar { gap: 12px; font-size: 12px; }
+      }
+      @page { size: A4; margin: 18mm; }
+      @media print {
+        :root { color-scheme: light; --background: #fff; --foreground: #000; --muted-foreground: #525252; --border: #e4e4e4; }
+        .page { max-width: none; padding: 0; }
+        .toolbar { display: none; }
+        header, h2, h3 { break-after: avoid; }
+        .entry { break-inside: avoid; }
+      }
+      /* Compact paper layout; kept local to the CV page. */
+      .page { max-width: calc(210mm + 48px); padding: 24px 24px 56px; }
+      .sheet { width: 100%; min-height: 297mm; padding: 40px 44px; background: #fff; border: 1px solid var(--border); border-radius: 3px; box-shadow: 0 2px 4px rgb(0 0 0 / 4%), 0 12px 28px -12px rgb(0 0 0 / 18%); }
+      .toolbar { margin-bottom: 20px; font-size: 13px; }
+      h1 { margin-bottom: 4px; font-size: 28px; letter-spacing: -0.035em; line-height: 1.2; }
+      .role { margin-bottom: 10px; font-size: 14px; }
+      .contact { margin: 3px 0; font-size: 11px; line-height: 1.6; }
+      header { padding-bottom: 18px; }
+      section { padding-top: 20px; }
+      h2 { margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); font-size: 11px; letter-spacing: 0.06em; }
+      h3 { margin-bottom: 3px; font-size: 12px; line-height: 1.5; }
+      .entry + .entry { margin-top: 12px; }
+      section p, section li { font-size: 12px; line-height: 1.55; }
+      section p { margin-bottom: 4px; }
+      section .meta { font-size: 10.5px; }
+      ul { padding-left: 17px; margin-top: 5px; }
+      li + li { margin-top: 3px; }
+      @media (max-width: 640px) {
+        .page { padding: 20px 12px 32px; }
+        .sheet { min-height: 0; padding: 28px 20px; }
+        .toolbar, .contact { font-size: 12px; }
+      }
+      @page { size: A4; margin: 12mm; }
+      @media print {
+        .page { max-width: none; padding: 0; }
+        .sheet { width: auto; min-height: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav class="toolbar" aria-label="CV navigation">
+        <a class="back" href="/">Back to website</a>
+        <a class="download" href="/cv.pdf" download="Adilkhan-Ersin-CV.pdf">Download PDF</a>
+      </nav>
+
+      <main class="sheet" id="resume" aria-label="Adilkhan Ersin resume">
+    <header class="resume-header">
+      <h1>Adilkhan Ersin</h1>
+      <p class="role">Cybersecurity Student</p>
+      <p class="contact">Astana, Kazakhstan<span class="separator">|</span><a href="tel:+77052602351">+7 705 260 23 51</a><span class="separator">|</span><a href="mailto:ersinadilhan.51@gmail.com">ersinadilhan.51@gmail.com</a></p>
+      <p class="contact"><a href="https://www.linkedin.com/in/ersinadilkhan/">linkedin.com/in/ersinadilkhan</a><span class="separator">|</span><a href="https://github.com/Adlkhy">github.com/Adlkhy</a></p>
+    </header>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <div class="entry">
+        <h3>Astana IT University — Cybersecurity</h3>
+        <p class="meta">Astana, Kazakhstan | Second-year student | Expected graduation: May 2028</p>
+      </div>
+      <div class="entry">
+        <h3>Almaty Humanitarian-Pedagogical College No. 2 — Informatics</h3>
+        <p class="meta">Almaty, Kazakhstan | September 2021 – June 2025</p>
+      </div>
+    </section>
+
+    <section class="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <p><strong>Security tools:</strong> Nmap, Burp Suite, Metasploit</p>
+      <p><strong>Systems &amp; tools:</strong> Linux (Kali Linux), Bash, Git, VirtualBox</p>
+      <p><strong>Programming:</strong> Python, TypeScript, C++, Java, HTML, CSS</p>
+      <p><strong>Web &amp; databases:</strong> React, Next.js, Supabase, PostgreSQL, MySQL</p>
+    </section>
+
+    <section aria-labelledby="security-heading">
+      <h2 id="security-heading">Security Training &amp; Labs</h2>
+      <div class="entry">
+        <h3>Cisco Networking Academy</h3>
+        <ul class="training-list">
+          <li>Junior Cybersecurity Analyst Career Path — completed</li>
+          <li>Cybersecurity Defense Analyst Career Path — completed</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>TryHackMe — CyberLens</h3>
+        <p>Completed the CyberLens cybersecurity lab with partial guidance.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="entry">
+        <h3>AuditBase — Security Audit Application</h3>
+        <p class="meta">Personal project | July 2026 – Present | <a class="project-link" href="https://github.com/Adlkhy/AuditBase">github.com/Adlkhy/AuditBase</a></p>
+        <ul>
+          <li>Independently developed a web application for organizing security audit findings.</li>
+          <li>Configured Supabase authentication and a database to support the application.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Evalis — AITU Grade Calculator</h3>
+        <p class="meta">Personal project | November 2025 – Present | <a class="project-link" href="https://github.com/Adlkhy/AITU-calculator">github.com/Adlkhy/AITU-calculator</a></p>
+        <ul>
+          <li>Independently developed a web application that helps students calculate academic grades.</li>
+          <li>Set up Supabase authentication and a database to support application functionality.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="languages-heading">
+      <h2 id="languages-heading">Languages</h2>
+      <p><strong>Kazakh:</strong> Native</p>
+      <p class="language-note"><strong>Russian &amp; English:</strong> Stronger comprehension; developing spoken fluency.</p>
+    </section>
+  </main>
+    </div>
+  </body>
+</html>

@@ -3,10 +3,10 @@ import { FiArrowUpCircle } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-4 sm:px-6 border-t border-border bg-background">
+    <footer className="py-8 px-4 sm:px-6 bg-background">
       <div className="max-w-3xl flex items-center justify-between mx-auto">
         <p className="text-center text-xs sm:text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Adilkhan Ersin. All rights reserved.
+          {new Date().getFullYear()} Adilkhan Ersin
         </p>
 
         <div className="flex gap-4 items-center">
