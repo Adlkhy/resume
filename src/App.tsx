@@ -5,6 +5,7 @@ import FeaturedProjects from './sections/FeaturedProjects';
 import SelectedProjects from './sections/SelectedProjects';
 import Certifications from './sections/Certifications';
 import WorkExperience from './sections/WorkExperience';
+import Skills from './sections/Skills';
 // import Activities from './sections/Activities';
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
         <Hero />
         <FeaturedProjects />
         <SelectedProjects />
-        <Certifications />
         <WorkExperience />
+        <Certifications />
+        <Skills />
         {/* <Activities /> */}
       </main>
       <Footer />

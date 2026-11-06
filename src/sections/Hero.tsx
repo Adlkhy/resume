@@ -1,6 +1,7 @@
 import { SiTryhackme, SiGithub,} from "react-icons/si";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
+import DitherVeil from "@/components/DitherVeil";
 
 const Hero = () => {
   return (
@@ -24,7 +25,27 @@ const Hero = () => {
         {/* Photo Placeholder */}
         <div className="mt-8 animate-fade-in-up animation-delay-100">
           <figure className="relative w-full aspect-square">
-            <img src="/hero.png" alt="User Photo" className="w-full h-full object-cover rounded-md border border-border" />
+            <DitherVeil 
+              src="/hero.png"
+              pattern="bayer"
+              pixelSize={2}
+              inkColor="#120f17"
+              paperColor="#f4f1ea"
+              revealRadius={200}
+              softness={0.6}
+              linger={1}
+              fit="cover"
+              rimColor="#a78bfa"
+              palette="duotone"
+              levels={2}
+              contrast={1.15}
+              brightness={0}
+              rim={0}
+              reverse={false}
+              wander={false}
+              clickBurst
+            />
+              {/* <img src="/hero.png" alt="User Photo" className="w-full h-full object-cover rounded-md border border-border" /> */}
             <figcaption className="mt-2 text-sm text-muted-foreground text-center">
               This is me (not really)
             </figcaption>

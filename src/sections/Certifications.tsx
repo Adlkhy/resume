@@ -1,110 +1,99 @@
-import { Award } from 'lucide-react';
-import { BiLinkExternal } from "react-icons/bi";
-import { IoCalendarSharp } from "react-icons/io5";
-import { FaRegBuilding } from "react-icons/fa";
+import FlowingMenu from "@/components/FlowingMenu";
 
 interface Certification {
   name: string;
   issuer: string;
-  date: string;
-  description?: string;
+  date?: string;
   link?: string;
-  credentialId?: string;
+  image?: string;
 }
 
 const certifications: Certification[] = [
+  { 
+    name: 'CCNA: Introduction to Networks', 
+    issuer: 'Cisco', 
+    date: 'Nov 2026', 
+    link: 'https://www.credly.com/badges/80771766-6b6b-448e-8196-1cfceab61e24',
+    image: './ccna.png'
+  },
+  { 
+    name: 'Cybersecurity Defense Analyst Career Path', 
+    issuer: 'Cisco', 
+    date: 'Jun 2026', 
+    link: 'https://www.credly.com/badges/774b7cfa-322e-450f-bb53-71989eaed645',
+    image: './ccna.png'
+  },
+  { 
+    name: 'AI Fundamentals with IBM SkillsBuild', 
+    issuer: 'Cisco', 
+    date: 'Jun 2026', 
+    link: 'https://www.credly.com/badges/eeaab234-2a96-464d-b1b8-a97e31518ef3',
+    image: './ccna.png'
+  },
   {
-    name: 'Cisco Cybersecurity Specialist',
+    name: 'Junior Cybersecurity Analyst Career Path',
     issuer: 'Cisco',
     date: 'Feb 2026',
-    description:
-      'Comprehensive training in cybersecurity fundamentals, including network security, threat analysis, and incident response.',
-    link: 'https://www.credly.com/earner/earned/badge/01d951d1-654b-4071-ace8-34201b7a0a5d',
+    link: 'https://www.credly.com/badges/01d951d1-654b-4071-ace8-34201b7a0a5d',
+    image: './ccna.png'
   },
   {
     name: 'Google Data Analytics Professional Certificate',
     issuer: 'Google (Coursera)',
     date: 'Dec 2024',
-    description:
-      'Comprehensive training in data analytics, including data cleaning, visualization, and analysis using tools like SQL and R.',
     link: 'https://www.credly.com/earner/earned/badge/2f9f2b2f-9f8b-4a8e-a135-f0bc7fec7729',
+    image: './ccna.png'
   },
   {
     name: 'Web Programming with Python and JavaScript',
     issuer: 'Harvard University (edX)',
     date: 'Oct 2024',
-    description:
-      'Full-stack web development using Python, JavaScript, and frameworks like Flask and React.',
     link: 'https://cs50.harvard.edu/certificates/e180c108-c5a8-4f5e-b536-dfdd234d917b',
+    image: './ccna.png'
   },
   {
     name: 'Introduction to Programming with Python',
     issuer: 'Harvard University (edX)',
     date: 'Jul 2024',
-    description:
-      'Fundamental programming concepts using Python, including data structures, algorithms, and software engineering principles.',
     link: 'https://cs50.harvard.edu/certificates/4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
+    image: './ccna.png'
   },
 ];
 
 const Certifications = () => {
   return (
-    <section id='certifications' className="py-8 px-4 sm:px-6">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-mono font-medium text-muted-foreground uppercase mb-4 animate-fade-in-up">
+    <section id="certifications" aria-labelledby="certifications-heading" className="scroll-mt-24 px-4 py-6 sm:px-6">
+      <div className="mx-auto max-w-3xl border-t border-border pt-6">
+        <h2 id="certifications-heading" className="mb-3 font-mono text-sm font-medium uppercase text-muted-foreground">
           Certifications
         </h2>
-        <p className="text-sm text-muted-foreground mb-6 animate-fade-in-up">
-          Professional certifications and credentials I've earned.
-        </p>
-
-        <div className="space-y-4">
-          {certifications.map((cert, index) => (
-            <div
-              key={cert.name}
-              className="bg-card border border-border rounded-md p-4 hover:shadow-md hover:border-primary transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Award className="w-5 h-5 text-foreground" />
-                    <h3 className="font-mono font-medium text-sm text-foreground">{cert.name}</h3>
-                  </div>
-
-                  <div className="flex flex-wrap justify-between items-center gap-4 mb-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1.5">
-                      <FaRegBuilding className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono text-xs md:text-sm">{cert.issuer}</span>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <IoCalendarSharp className="w-4 h-4 text-muted-foreground" />
-                      <span className="font-mono text-xs md:text-sm">{cert.date}</span>
-                    </div>
-                  </div>
-
-                  {cert.description && (
-                    <p className="text-sm font-mono text-muted-foreground leading-relaxed mb-3">
-                      {cert.description}
-                    </p>
-                  )}
-
-                  {cert.link && (
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-start w-full gap-1.5 text-sm font-mono text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <span>View Credential</span>
-                      <BiLinkExternal className="w-3.5 h-3.5" />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        {certifications.length === 0 ? (
+          <p className="text-sm text-muted-foreground">Certificates will be added here.</p>
+        ) : (
+          <FlowingMenu
+            items={certifications}
+            speed={60}
+            stretch={0.6}
+            magnet={0.25}
+            followCursor={0.4}
+            textColor="var(--foreground)"
+            bgColor="var(--background)"
+            marqueeBgColor="var(--accent)"
+            marqueeTextColor="var(--foreground)"
+            direction="alternate"
+            duration={0.5}
+            bandInset={0}
+            bandRadius={0}
+            carryContent={false}
+            dividers
+            dimInactive={false}
+            align="left"
+            showIndex={false}
+            showArrow
+            imageShape="pill"
+            intro
+          />
+        )}
       </div>
     </section>
   );
