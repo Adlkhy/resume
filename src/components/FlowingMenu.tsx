@@ -663,7 +663,7 @@ function FlowingMenu({
             >
               {dividers && index > 0 && <span className={DIVIDER} data-intro-rule="" aria-hidden="true" />}
               {item.link ? (
-                <a className={LINK} style={showIndex ? undefined : { gridTemplateColumns: 'minmax(0, 1fr) auto' }} href={item.link} aria-current={active ? 'page' : undefined} {...handlers}>
+                <a className={LINK} target="_blank" rel="noopener noreferrer" style={showIndex ? undefined : { gridTemplateColumns: 'minmax(0, 1fr) auto' }} href={item.link} aria-current={active ? 'page' : undefined} {...handlers}>
                   {content}
                 </a>
               ) : (

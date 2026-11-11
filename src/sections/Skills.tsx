@@ -23,14 +23,14 @@ interface Skill {
 const skills: Skill[] = [
   { name: 'Penetration Testing', icon: ShieldCheck },
   { name: 'React', icon: SiReact },
-  { name: 'Vite', primary: true, icon: SiVite },
-  { name: 'TypeScript', primary: true, icon: SiTypescript },
+  { name: 'Vite', icon: SiVite },
+  { name: 'TypeScript', icon: SiTypescript },
   { name: 'HTML', icon: SiHtml5 },
   { name: 'Tailwind CSS', icon: SiTailwindcss },
   { name: 'Django', icon: SiDjango },
-  { name: 'Python', primary: true, icon: SiPython },
+  { name: 'Python', icon: SiPython },
   { name: 'C++', icon: SiCplusplus },
-  { name: 'Git', primary: true, icon: SiGit },
+  { name: 'Git', icon: SiGit },
   { name: 'Node.js', icon: SiNodedotjs },
   { name: 'PostgreSQL', icon: SiPostgresql },
   { name: 'SOC', icon: MdMonitorHeart },
@@ -41,7 +41,7 @@ const skills: Skill[] = [
   { name: 'Windows Security', icon: FaWindows },
   { name: 'Artificial Intelligence', icon: Cpu },
   { name: 'Network Security', icon: Network },
-  { name: 'Linux', primary: true, icon: Terminal },
+  { name: 'Linux', icon: Terminal },
 ];
 
 const Skills = () => {
@@ -49,7 +49,7 @@ const Skills = () => {
     <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-24 px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-3xl border-t border-border pt-6">
         <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <h2 id="skills-heading" className="font-mono text-sm font-medium uppercase text-muted-foreground">
+          <h2 id="skills-heading" className="font-mono text-sm sm:text-md uppercase font-medium text-muted-foreground">
             Skills
           </h2>
         </div>
@@ -58,10 +58,18 @@ const Skills = () => {
             <li key={name} className="max-w-full">
               <Badge
                 variant={primary ? 'default' : 'outline'}
-                className="max-w-full gap-1.5 rounded-md px-2.5 py-1 font-mono text-xs whitespace-normal text-left leading-5"
+                className="group max-w-full gap-1.5 rounded-md px-2.5 py-1  font-mono text-xs sm:text-md whitespace-normal "
               >
                 {SHOW_SKILL_ICONS && Icon && <Icon aria-hidden="true" className="shrink-0" />}
-                <span className="min-w-0 wrap-break-word">{name}</span>
+                <span className="relative inline-flex overflow-hidden uppercase">
+                  <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
+                    {name}
+                  </div>
+                  <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
+                    {name}
+                  </div>
+                </span>
+                {/* <span className="min-w-0 wrap-break-word">{name}</span> */}
                 {primary && <span className="sr-only"> — core skill</span>}
               </Badge>
             </li>

@@ -1,5 +1,7 @@
 // import { BiLinkExternal } from "react-icons/bi";
 
+import { Badge } from "@/components/ui/badge";
+
 interface Experience {
   title: string;
   company: string;
@@ -49,7 +51,7 @@ const WorkExperience = () => {
   return (
     <section id="work" className="py-12 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-sm font-mono font-medium text-muted-foreground uppercase mb-2 animate-fade-in-up">
+        <h2 className="text-sm sm:text-md font-mono font-medium text-muted-foreground uppercase mb-2 animate-fade-in-up">
           Work & Experience
         </h2>
         <p className="text-sm text-muted-foreground mb-8 animate-fade-in-up">
@@ -92,12 +94,10 @@ const WorkExperience = () => {
 
               <div className="flex flex-wrap gap-2">
                 {exp.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs md:text-sm px-2.5 py-1 font-mono bg-foreground/10 text-foreground rounded-md"
-                  >
-                    {tech}
-                  </span>
+                  <Badge
+                    variant='outline'
+                    className="rounded-md px-2.5 py-1 font-mono text-xs sm:text-md"
+                  >{tech}</Badge>
                 ))}
               </div>
             </div>

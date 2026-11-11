@@ -1,4 +1,5 @@
 import PixelCard from "@/components/PixelCard";
+import { Badge } from "@/components/ui/badge";
 
 const FeaturedProjects = () => {
   return (
@@ -31,10 +32,14 @@ const FeaturedProjects = () => {
           <PixelCard className="h-55">
             <div className="absolute inset-0 border border-border p-4 animate-fade-in-up">
               <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs px-2 py-0.5 bg-accent rounded font-mono text-accent-foreground">
+              {/* <span className="text-xs px-2 py-0.5 bg-accent rounded font-mono text-accent-foreground">
                 Currently Building
-              </span>
-            </div>
+              </span> */}
+              <Badge
+                variant='outline'
+                className="rounded-md px-2.5 py-1 font-mono text-xs sm:text-md"
+                >Currently Building</Badge>
+              </div>
             <a
               href="https://evaiis.vercel.app/"
               target="_blank"
@@ -54,7 +59,7 @@ const FeaturedProjects = () => {
             </div>
           </PixelCard>
           {/* Second Card */}
-          <PixelCard className="h-55">
+          {/* <PixelCard className="h-55">
             <div className="absolute inset-0 border border-border p-4 animate-fade-in-up">
               <div className="flex items-center gap-2 mb-4">
               <span className="text-xs px-2 py-0.5 bg-accent rounded font-mono text-accent-foreground">
@@ -76,7 +81,7 @@ const FeaturedProjects = () => {
               Building a calm, colorful educational platform for teaching cooking, life skills, and educational games to kids 8-16, including autistic learners and children with special educational needs.
             </p>
             </div>
-          </PixelCard>
+          </PixelCard> */}
         </div>
       </div>
     </section>

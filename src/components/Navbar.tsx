@@ -49,25 +49,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-4 ">
             <button
               onClick={() => scrollToSection('projects')}
-              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="relative cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('certifications')}
-              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="relative cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
             >
               Certifications
             </button>
             <button
               onClick={() => scrollToSection('work')}
-              className="cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="relative cursor-pointer font-mono text-sm text-muted-foreground hover:text-foreground transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
             >
               Work
             </button>
             <a
               href="/cv"
-              className="font-mono ml-2 border px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors"
+              className="relative font-mono ml-2 border px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
             >
               CV
             </a>
@@ -94,7 +94,7 @@ const Navbar = () => {
                   <a
                     onClick={() => setIsMobileMenuOpen(false)}
                     key={link.label}
-                    href={link.href} className="px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent"
+                    href={link.href} className="relative px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent after:absolute after:bottom-2 after:left-4 after:h-px after:w-[calc(100%-2rem)] after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100"
                   >
                     {link.label}
                   </a>

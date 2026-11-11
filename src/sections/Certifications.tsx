@@ -21,42 +21,42 @@ const certifications: Certification[] = [
     issuer: 'Cisco', 
     date: 'Jun 2026', 
     link: 'https://www.credly.com/badges/774b7cfa-322e-450f-bb53-71989eaed645',
-    image: './ccna.png'
+    image: './cybdef.png'
   },
   { 
     name: 'AI Fundamentals with IBM SkillsBuild', 
     issuer: 'Cisco', 
     date: 'Jun 2026', 
     link: 'https://www.credly.com/badges/eeaab234-2a96-464d-b1b8-a97e31518ef3',
-    image: './ccna.png'
+    image: './aifun.png'
   },
   {
     name: 'Junior Cybersecurity Analyst Career Path',
     issuer: 'Cisco',
     date: 'Feb 2026',
     link: 'https://www.credly.com/badges/01d951d1-654b-4071-ace8-34201b7a0a5d',
-    image: './ccna.png'
+    image: './juncyb.png'
   },
   {
     name: 'Google Data Analytics Professional Certificate',
     issuer: 'Google (Coursera)',
     date: 'Dec 2024',
     link: 'https://www.credly.com/earner/earned/badge/2f9f2b2f-9f8b-4a8e-a135-f0bc7fec7729',
-    image: './ccna.png'
+    image: './google.png'
   },
   {
     name: 'Web Programming with Python and JavaScript',
     issuer: 'Harvard University (edX)',
     date: 'Oct 2024',
     link: 'https://cs50.harvard.edu/certificates/e180c108-c5a8-4f5e-b536-dfdd234d917b',
-    image: './ccna.png'
+    image: './cs50w.png'
   },
   {
     name: 'Introduction to Programming with Python',
     issuer: 'Harvard University (edX)',
     date: 'Jul 2024',
     link: 'https://cs50.harvard.edu/certificates/4244d9e0-4f4c-41ad-89d6-0a9d35930cc8',
-    image: './ccna.png'
+    image: './cs50p.png'
   },
 ];
 
@@ -64,7 +64,7 @@ const Certifications = () => {
   return (
     <section id="certifications" aria-labelledby="certifications-heading" className="scroll-mt-24 px-4 py-6 sm:px-6">
       <div className="mx-auto max-w-3xl border-t border-border pt-6">
-        <h2 id="certifications-heading" className="mb-3 font-mono text-sm font-medium uppercase text-muted-foreground">
+        <h2 id="certifications-heading" className="mb-3 font-mono text-sm sm:text-md font-medium uppercase text-muted-foreground">
           Certifications
         </h2>
         {certifications.length === 0 ? (

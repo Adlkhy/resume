@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
-import FeaturedProjects from './sections/FeaturedProjects';
+// import FeaturedProjects from './sections/FeaturedProjects';
 import SelectedProjects from './sections/SelectedProjects';
 import Certifications from './sections/Certifications';
 import WorkExperience from './sections/WorkExperience';
@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <FeaturedProjects />
+        {/* <FeaturedProjects /> */}
         <SelectedProjects />
         <WorkExperience />
         <Certifications />

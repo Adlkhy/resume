@@ -4,6 +4,9 @@ import { LuMail } from "react-icons/lu";
 import DitherVeil from "@/components/DitherVeil";
 
 const Hero = () => {
+  const socialLinkClassName =
+    "relative flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-foreground after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100";
+
   return (
     <section className="pt-32 pb-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto">
@@ -76,7 +79,7 @@ const Hero = () => {
             href="mailto:ersinadilhan.51@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={socialLinkClassName}
           >
             <LuMail className="w-4 h-4" />
             <span>ersinadilkhan[at]gmail[dot]com</span>
@@ -85,7 +88,7 @@ const Hero = () => {
             href="https://github.com/adlkhy"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={socialLinkClassName}
           >
             <SiGithub className="w-4 h-4" />
             <span>GitHub</span>
@@ -94,7 +97,7 @@ const Hero = () => {
             href="https://www.linkedin.com/in/ersinadilkhan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={socialLinkClassName}
           >
             <FaLinkedinIn className="w-4 h-4" />
             <span>LinkedIn</span>
@@ -103,7 +106,7 @@ const Hero = () => {
             href="https://www.instagram.com/adilikecious/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={socialLinkClassName}
           >
             <FaInstagram className="w-4 h-4" />
             <span>Instagram</span>
@@ -112,7 +115,7 @@ const Hero = () => {
             href="https://tryhackme.com/p/adlk"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={socialLinkClassName}
           >
             <SiTryhackme className="w-4 h-4" />
             <span>TryHackMe</span>
