@@ -99,6 +99,35 @@
         .page { max-width: none; padding: 0; }
         .sheet { width: auto; min-height: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
       }
+      /* English CV typography and layout, scoped to the paper contents. */
+      #resume { padding: 60px 29px 40px; font-family: Arial, Helvetica, sans-serif; color: #000; }
+      #resume header { padding: 0; border: 0; text-align: center; }
+      #resume h1 { margin: 0 0 5px; font-size: 25px; line-height: 1.2; letter-spacing: 0; font-weight: 700; }
+      #resume .contact { margin: 0; color: #000; font-size: 14px; line-height: 1.5; }
+      #resume a { color: #0057b8; text-underline-offset: 2px; }
+      #resume .phone { color: inherit; text-decoration: none; }
+      #resume .separator { margin: 0 4px; }
+      #resume section { padding-top: 20px; }
+      #resume section:first-of-type { padding-top: 13px; }
+      #resume h2 { margin: 0 0 4px; padding-bottom: 6px; border-bottom: 1px solid #333; color: #000; font: 700 15px/1.2 Arial, Helvetica, sans-serif; letter-spacing: 0; }
+      #resume h3, #resume section p, #resume section li { margin: 0; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 13.5px; line-height: 1.35; }
+      #resume h3, #resume strong { font-weight: 700; }
+      #resume .entry + .entry { margin-top: 0; }
+      #resume .entry-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+      #resume .date { flex-shrink: 0; font-weight: 400; white-space: nowrap; }
+      #resume ul { margin: 0; padding-left: 22px; }
+      #resume li + li { margin-top: 0; }
+      #resume .training-list .entry-heading { font-size: inherit; }
+      @media (max-width: 640px) {
+        #resume { padding: 28px 20px; }
+        #resume .contact { font-size: 12px; }
+        #resume .entry-heading { flex-wrap: wrap; gap: 0 8px; }
+        #resume .date { white-space: normal; }
+      }
+      @media print {
+        #resume { padding: 4mm 0 0; }
+        #resume section { break-inside: avoid; }
+      }
     </style>
   </head>
   <body>
@@ -109,74 +138,70 @@
       </nav>
 
       <main class="sheet" id="resume" aria-label="Adilkhan Ersin resume">
-    <header class="resume-header">
-      <h1>Adilkhan Ersin</h1>
-      <p class="role">Cybersecurity Student</p>
-      <p class="contact">Astana, Kazakhstan<span class="separator">|</span><a href="tel:+77052602351">+7 705 260 23 51</a><span class="separator">|</span><a href="mailto:ersinadilhan.51@gmail.com">ersinadilhan.51@gmail.com</a></p>
-      <p class="contact"><a href="https://www.linkedin.com/in/ersinadilkhan/">linkedin.com/in/ersinadilkhan</a><span class="separator">|</span><a href="https://github.com/Adlkhy">github.com/Adlkhy</a></p>
-    </header>
+        <header class="resume-header">
+          <h1>Adilkhan Ersin</h1>
+          <p class="contact">Astana, Kazakhstan<span class="separator">|</span><a class="phone" href="tel:+77052602351">+7 705 260 23 51</a><span class="separator">|</span><a href="mailto:ersinadilhan.51@gmail.com">ersinadilhan.51@gmail.com</a><span class="separator">|</span><a href="https://www.linkedin.com/in/ersinadilkhan/">Linkedin</a><span class="separator">|</span><a href="https://github.com/Adlkhy">Github</a></p>
+        </header>
 
-    <section aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <div class="entry">
-        <h3>Astana IT University — Cybersecurity</h3>
-        <p class="meta">Astana, Kazakhstan | Second-year student | Expected graduation: May 2028</p>
-      </div>
-      <div class="entry">
-        <h3>Almaty Humanitarian-Pedagogical College No. 2 — Informatics</h3>
-        <p class="meta">Almaty, Kazakhstan | September 2021 – June 2025</p>
-      </div>
-    </section>
+        <section aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div class="entry">
+            <div class="entry-heading"><h3>Astana IT University - Cybersecurity (Astana, Kazakhstan)</h3><p class="date">Expected Graduation: May 2028</p></div>
+            <p>Bachelor of Science (Second year student)</p>
+          </div>
+          <div class="entry">
+            <div class="entry-heading"><h3>Almaty Humanitarian-Pedagogical College №2 - Informatics (Almaty, Kazakhstan)</h3><p class="date">Sep 2021 – Jun 2025</p></div>
+            <p>Associate Degree in Computer Science</p>
+          </div>
+        </section>
 
-    <section class="skills" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Technical Skills</h2>
-      <p><strong>Security tools:</strong> Nmap, Burp Suite, Metasploit</p>
-      <p><strong>Systems &amp; tools:</strong> Linux (Kali Linux), Bash, Git, VirtualBox</p>
-      <p><strong>Programming:</strong> Python, TypeScript, C++, Java, HTML, CSS</p>
-      <p><strong>Web &amp; databases:</strong> React, Next.js, Supabase, PostgreSQL, MySQL</p>
-    </section>
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Technical Skills</h2>
+          <ul>
+            <li><strong>Security tools:</strong> Nmap, Burp Suite, Metasploit</li>
+            <li><strong>Systems and tools:</strong> Linux (Kali Linux), Bash, Git, VirtualBox</li>
+            <li><strong>Programming:</strong> Python, TypeScript, C++, Java, HTML, CSS</li>
+            <li><strong>Web and databases:</strong> React, Vite, Supabase, PostgreSQL, Typescript</li>
+          </ul>
+        </section>
 
-    <section aria-labelledby="security-heading">
-      <h2 id="security-heading">Security Training &amp; Labs</h2>
-      <div class="entry">
-        <h3>Cisco Networking Academy</h3>
-        <ul class="training-list">
-          <li>Junior Cybersecurity Analyst Career Path — completed</li>
-          <li>Cybersecurity Defense Analyst Career Path — completed</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>TryHackMe — CyberLens</h3>
-        <p>Completed the CyberLens cybersecurity lab with partial guidance.</p>
-      </div>
-    </section>
+        <section aria-labelledby="security-heading">
+          <h2 id="security-heading">Security Training &amp; Labs</h2>
+          <ul class="training-list">
+            <li><div class="entry-heading"><strong>CCNA: Introduction to Networks (<a href="https://www.credly.com/badges/80771766-6b6b-448e-8196-1cfceab61e24">Cisco</a>)</strong><span class="date">November, 2026.</span></div></li>
+            <li><div class="entry-heading"><strong>Junior Cybersecurity Analyst Career Path (<a href="https://www.credly.com/badges/01d951d1-654b-4071-ace8-34201b7a0a5d/public_url">Cisco</a>)</strong><span class="date">February, 2026.</span></div></li>
+            <li><div class="entry-heading"><strong>Cybersecurity Defense Analyst Career Path (<a href="https://www.credly.com/badges/774b7cfa-322e-450f-bb53-71989eaed645">Cisco</a>)</strong><span class="date">June, 2026.</span></div></li>
+          </ul>
+        </section>
 
-    <section aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <div class="entry">
-        <h3>AuditBase — Security Audit Application</h3>
-        <p class="meta">Personal project | July 2026 – Present | <a class="project-link" href="https://github.com/Adlkhy/AuditBase">github.com/Adlkhy/AuditBase</a></p>
-        <ul>
-          <li>Independently developed a web application for organizing security audit findings.</li>
-          <li>Configured Supabase authentication and a database to support the application.</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>Evalis — AITU Grade Calculator</h3>
-        <p class="meta">Personal project | November 2025 – Present | <a class="project-link" href="https://github.com/Adlkhy/AITU-calculator">github.com/Adlkhy/AITU-calculator</a></p>
-        <ul>
-          <li>Independently developed a web application that helps students calculate academic grades.</li>
-          <li>Set up Supabase authentication and a database to support application functionality.</li>
-        </ul>
-      </div>
-    </section>
+        <section aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Projects</h2>
+          <div class="entry">
+            <div class="entry-heading"><h3>Security Audit &amp; Vulnerability Management Platform (<a href="https://github.com/Adlkhy/AuditBase">AuditBase</a>)</h3><p class="date">July, 2026 - Present</p></div>
+            <p><strong>Technologies:</strong> TypeScript, React, Node.js, Supabase (PostgreSQL), Python, Tailwind CSS</p>
+            <ul>
+              <li>Architected and deployed a full-stack security auditing platform using Vite, TypeScript, and Supabase, enabling users to manage, track, and document penetration testing findings and audit logs in real time.</li>
+              <li>Engineered automated log parsing and risk classification pipelines in Python, categorizing security findings by severity (OWASP/CVSS)</li>
+              <li>Implemented strict Operational Security (OPSEC) principles by configuring Row Level Security (RLS) policies and JWT authentication in Supabase, ensuring data isolation and confidentiality for sensitive security records.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <div class="entry-heading"><h3>Grade Calculator &amp; Dynamic Leaderboard (<a href="https://github.com/Adlkhy/AITU-calculator">Evalis</a>)</h3><p class="date">November, 2025 - Present</p></div>
+            <p><strong>Technologies:</strong> TypeScript, React (Vite), Node.js, Supabase, Git</p>
+            <ul>
+              <li>Designed and implemented a full-stack web application enabling 350+ users to dynamically calculate academic grades and track performance trends.</li>
+              <li>Engineered a dynamic leaderboard feature that fosters healthy competition among users.</li>
+              <li>Integrated a secure backend using Supabase for real-time user authentication and data management, implementing logical security rules to protect user grade data.</li>
+            </ul>
+          </div>
+        </section>
 
-    <section aria-labelledby="languages-heading">
-      <h2 id="languages-heading">Languages</h2>
-      <p><strong>Kazakh:</strong> Native</p>
-      <p class="language-note"><strong>Russian &amp; English:</strong> Stronger comprehension; developing spoken fluency.</p>
-    </section>
-  </main>
+        <section aria-labelledby="languages-heading">
+          <h2 id="languages-heading">Languages</h2>
+          <p><strong>Kazakh:</strong> Native</p>
+          <p><strong>Russian (B2) and English (B2):</strong> Comprehension stronger than spoken communication, developing conversational fluency</p>
+        </section>
+        </main>
     </div>
   </body>
 </html>
